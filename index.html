@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enter Your Code!</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0f172a,#1e293b,#0f172a);
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+background:rgba(255,255,255,0.08);
+padding:40px;
+border-radius:25px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(0,255,255,0.4);
+width:500px;
+}
+
+h1{
+color:white;
+font-size:50px;
+margin-bottom:15px;
+text-shadow:0 0 20px cyan;
+}
+
+.subtitle{
+color:#ddd;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:15px;
+font-size:18px;
+border:none;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+padding:15px;
+font-size:20px;
+font-weight:bold;
+border:none;
+border-radius:12px;
+cursor:pointer;
+background:linear-gradient(45deg,#ff8c00,#ffd700);
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#error{
+margin-top:15px;
+color:red;
+font-weight:bold;
+font-size:20px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>ENTER YOUR CODE!</h1>
+
+<p class="subtitle">
+Découvre des codes secrets pour débloquer des récompenses !
+</p>
+
+<input
+type="text"
+id="codeInput"
+placeholder="Entre ton code ici">
+
+<button onclick="checkCode()">
+SUBMIT
+</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+function checkCode(){
+
+const code =
+document.getElementById("codeInput")
+.value
+.trim()
+.toUpperCase();
+
+if(code==="WELCOME980"){
+window.location.href="reward1.html";
+}
+else{
+document.getElementById("error")
+.innerHTML="❌ Code incorrect";
+}
+
+}
+
+</script>
+
+</body>
+</html>
